@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../common.dart';
+import '../../common/common.dart';
 
 class OrWidget extends StatelessWidget {
   const OrWidget({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../common.dart';
+import '../../common/common.dart';
 
 class PaidPackageCard extends StatelessWidget {
   const PaidPackageCard({Key? key}) : super(key: key);

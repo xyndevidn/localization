@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../common.dart';
+import '../../common/common.dart';
 
 class FreePackageCard extends StatelessWidget {
   const FreePackageCard({Key? key}) : super(key: key);

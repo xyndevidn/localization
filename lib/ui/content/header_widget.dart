@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../common.dart';
+import '../../common/common.dart';
 
 class CostWidget extends StatelessWidget {
   const CostWidget({Key? key}) : super(key: key);

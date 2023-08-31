@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../common.dart';
+import '../../common/common.dart';
 import 'benefit_table.dart';
 
 class BenefitWidget extends StatelessWidget {
