@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         final provider = Provider.of<LocalizationProvider>(context);
         return MaterialApp(
+          showSemanticsDebugger: false,
           title: 'Flutter Localization & Accessibility',
           locale: provider.locale,
           localizationsDelegates: AppLocalizations.localizationsDelegates,

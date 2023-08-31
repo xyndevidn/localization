@@ -40,28 +40,40 @@ class BenefitTable extends StatelessWidget {
       children: [
         TableRow(
           children: [
-            TableCellWidget(
-              // text: "Fitur Utama",
-              text: AppLocalizations.of(context)!.benefitFeatureTitle1,
-              isBold: true,
+            ExcludeSemantics(
+              child: TableCellWidget(
+                // text: "Fitur Utama",
+                text: AppLocalizations.of(context)!.benefitFeatureTitle1,
+                isBold: true,
+              ),
             ),
-            TableCellWidget(
-              // text: "Uji Coba",
-              text: AppLocalizations.of(context)!.benefitFeatureTitle2,
-              isBold: true,
+            ExcludeSemantics(
+              child: TableCellWidget(
+                // text: "Uji Coba",
+                text: AppLocalizations.of(context)!.benefitFeatureTitle2,
+                isBold: true,
+              ),
             ),
-            TableCellWidget(
-              // text: "Langganan",
-              text: AppLocalizations.of(context)!.benefitFeatureTitle3,
-              isBold: true,
+            ExcludeSemantics(
+              child: TableCellWidget(
+                // text: "Langganan",
+                text: AppLocalizations.of(context)!.benefitFeatureTitle3,
+                isBold: true,
+              ),
             ),
           ],
         ),
         ...benefitFeatureList.map((benefitFeature) {
           return TableRow(
             children: [
-              TableCellWidget(
-                text: benefitFeature.feature,
+              Semantics(
+                label: AppLocalizations.of(context)!
+                    .accBenefitFeatureItem1(benefitFeature.feature),
+                child: ExcludeSemantics(
+                  child: TableCellWidget(
+                    text: benefitFeature.feature,
+                  ),
+                ),
               ),
               TableCellWidget(
                 check: benefitFeature.freeBenefit,

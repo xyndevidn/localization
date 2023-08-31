@@ -2,6 +2,7 @@ import 'package:app_settings/app_settings.dart';
 import 'package:flutter/material.dart';
 import 'package:localization/ui/widgets/flag_icon_widget.dart';
 
+import '../common/common.dart';
 import 'content/benefit_widget.dart';
 import 'content/header_widget.dart';
 import 'widgets/max_width_widget.dart';
@@ -16,22 +17,23 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Image.asset("assets/dicoding-academy.png"),
+          child: Image.asset(
+            "assets/dicoding-academy.png",
+            semanticLabel: AppLocalizations.of(context)!.accLogoAppBar,
+          ),
         ),
-        title: const Text("Dicoding Academy"),
+        title: Text(
+          "Dicoding Academy",
+          semanticsLabel: AppLocalizations.of(context)!.accTitleAppBar,
+        ),
         actions: [
-          // IconButton(
-          //   onPressed: () {},
-          //   icon: const Icon(Icons.flag),
-          // ),
           const FlagIconWidget(),
           IconButton(
             onPressed: () async {
               await AppSettings.openAppSettings();
-              // version 4.3.1
-              // await AppSettings.openDeviceSettings();
             },
             icon: const Icon(Icons.settings),
+            tooltip: AppLocalizations.of(context)!.accOpenSetting,
           ),
         ],
       ),
